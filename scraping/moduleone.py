@@ -12,5 +12,3 @@ def download(url, num_retries=2):
             if hasattr(e, 'code') and 500 <= e.code < 600:
                 return download(url, num_retries - 1)
         return html
-
-download('http://www.google.com')
